@@ -1,5 +1,3 @@
-from IPython import embed
-
 col1_file = open("./col1.txt")
 col2_file = open("./col2.txt")
 output_file = open("./output.txt", mode="w")
