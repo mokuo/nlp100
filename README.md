@@ -2,8 +2,12 @@
 
 https://nlp100.github.io/ja/
 
-## test
-
 ```zsh
+# ex)
+pipenv shell
+cd ch04/
+python _30.py
+
+# test
 pipenv run pytest
 ```
