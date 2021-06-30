@@ -131,3 +131,4 @@ dmypy.json
 # Custom
 output.txt
 sh_output.txt
+output_*.txt

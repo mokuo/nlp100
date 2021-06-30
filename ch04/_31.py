@@ -1,5 +1,12 @@
-from ch04._30 import neko
-import numpy as np
+from _30 import neko
 
-result = neko()
-flatten_result = np.array(result).flatten()
+neko_result = neko()
+flatten: list[dict] = []
+
+# morpheme: 形態素
+for m_list in neko_result:
+    for m in m_list:
+        flatten.append(m)
+
+result = [m["surface"] for m in flatten]
+print(result)
