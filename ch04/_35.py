@@ -1,19 +1,21 @@
-from enum import Flag
 from common import flatten_neko
 
-neko = flatten_neko()
 
-# 単語をキーにカウント
-cnt = {}
+def sorted_cnt() -> list[(str, int)]:
+    neko = flatten_neko()
 
-for m in neko:
-    word: str = m['base']
+    # 単語をキーにカウント
+    cnt = {}
 
-    if (word in cnt):
-        cnt[word] += 1
-    else:
-        cnt[word] = 1
+    for m in neko:
+        word: str = m['base']
 
-sorted_cnt = sorted(cnt.items(), key=lambda x: x[1], reverse=True)
+        if (word in cnt):
+            cnt[word] += 1
+        else:
+            cnt[word] = 1
 
-print(sorted_cnt)
+    return sorted(cnt.items(), key=lambda x: x[1], reverse=True)
+
+
+# print(sorted_cnt())
